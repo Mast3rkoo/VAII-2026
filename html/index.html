@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Navarené | recepty na jednom mieste</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@600;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="i-search" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="7" />
+        <path d="M20 20l-4-4" />
+      </symbol>
+    </svg>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <span class="logo" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M9 3.5c-.8 1 .8 2-0 3M12 3c-.8 1 .8 2 0 3M15 3.5c-.8 1 .8 2 0 3"
+              />
+              <path
+                d="M4 10h16M5 10v6a4 4 0 004 4h6a4 4 0 004-4v-6M2.5 12H5M19 12h2.5"
+              />
+            </svg>
+          </span>
+          <span class="brand-name">Navarené</span>
+        </a>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label
+          for="nav-toggle"
+          class="nav-toggle-label"
+          aria-label="Otvoriť menu"
+          ><span></span
+        ></label>
+
+        <div class="header-menu">
+          <nav class="main-nav" aria-label="Hlavná navigácia">
+            <ul>
+              <li><a href="index.html" aria-current="page">Domov</a></li>
+              <li><a href="recept.html">Recepty</a></li>
+              <li><a href="#">Pridať recept</a></li>
+              <li><a href="#">Môj profil</a></li>
+            </ul>
+          </nav>
+
+          <form class="search" role="search" action="#">
+            <svg class="icon icon-sm" aria-hidden="true">
+              <use href="#i-search" />
+            </svg>
+            <label for="search" class="visually-hidden">Hľadať</label>
+            <input
+              type="search"
+              id="search"
+              name="q"
+              placeholder="Hľadať recept alebo surovinu…"
+            />
+          </form>
+
+          <div class="auth">
+            <a class="btn" href="#">Prihlásiť sa</a>
+            <a class="btn btn-primary" href="#">Registrácia</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container page">
+      <nav class="breadcrumb" aria-label="Navigačná cesta">
+        <ol>
+          <li><a href="index.html">Domov</a></li>
+          <li><a href="#">Sekcia</a></li>
+          <li aria-current="page">Podstránka</li>
+        </ol>
+      </nav>
+
+      <h1 class="page-title">Nadpis aktuálnej stránky</h1>
+
+      <div class="flash" role="status">
+        Oblasť pre oznámenia a chybové hlásenia (napr. „Recept bol úspešne
+        uložený“)
+      </div>
+
+      <section
+        class="placeholder content-placeholder"
+        aria-label="Obsah stránky"
+      >
+        <span>
+          <strong>OBSAH STRÁNKY</strong>
+          mení sa podľa podstránky (zoznam receptov, detail, formulár, profil,
+          administrácia)
+        </span>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2026 Navarené · Filip Noga</p>
+        <ul>
+          <li><a href="#">O aplikácii</a></li>
+          <li><a href="#">Kontakt</a></li>
+          <li><a href="#">Podmienky používania</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

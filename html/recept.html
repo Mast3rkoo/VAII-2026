@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sviečková na smotane | Navarené</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@600;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="i-search" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="7" />
+        <path d="M20 20l-4-4" />
+      </symbol>
+      <symbol id="i-star" viewBox="0 0 24 24">
+        <path
+          d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"
+        />
+      </symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24">
+        <path
+          d="M12 20s-7-4.3-9-8.4C1.4 8.2 3.6 4.5 7.2 4.5c2 0 3.5 1.1 4.8 2.9 1.3-1.8 2.8-2.9 4.8-2.9 3.6 0 5.8 3.7 4.2 7.1C19 15.7 12 20 12 20z"
+        />
+      </symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 7v5l3 2" />
+      </symbol>
+      <symbol id="i-users" viewBox="0 0 24 24">
+        <circle cx="9" cy="8" r="4" />
+        <path
+          d="M2 21c0-4 3-6.5 7-6.5s7 2.5 7 6.5M16 4.5a4 4 0 010 7M18.5 15c2 .8 3.5 2.8 3.5 6"
+        />
+      </symbol>
+      <symbol id="i-tag" viewBox="0 0 24 24">
+        <path d="M3 12V4h8l10 10-8 8z" />
+        <circle cx="7.5" cy="8.5" r="1" />
+      </symbol>
+      <symbol id="i-edit" viewBox="0 0 24 24">
+        <path d="M4 20h4L19 9l-4-4L4 16z" />
+      </symbol>
+      <symbol id="i-trash" viewBox="0 0 24 24">
+        <path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13" />
+      </symbol>
+    </svg>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <span class="logo" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M9 3.5c-.8 1 .8 2-0 3M12 3c-.8 1 .8 2 0 3M15 3.5c-.8 1 .8 2 0 3"
+              />
+              <path
+                d="M4 10h16M5 10v6a4 4 0 004 4h6a4 4 0 004-4v-6M2.5 12H5M19 12h2.5"
+              />
+            </svg>
+          </span>
+          <span class="brand-name">Navarené</span>
+        </a>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label
+          for="nav-toggle"
+          class="nav-toggle-label"
+          aria-label="Otvoriť menu"
+          ><span></span
+        ></label>
+
+        <div class="header-menu">
+          <nav class="main-nav" aria-label="Hlavná navigácia">
+            <ul>
+              <li><a href="index.html">Domov</a></li>
+              <li><a href="recept.html" aria-current="page">Recepty</a></li>
+              <li><a href="#">Pridať recept</a></li>
+              <li><a href="#">Môj profil</a></li>
+            </ul>
+          </nav>
+
+          <form class="search" role="search" action="#">
+            <svg class="icon icon-sm" aria-hidden="true">
+              <use href="#i-search" />
+            </svg>
+            <label for="search" class="visually-hidden">Hľadať</label>
+            <input
+              type="search"
+              id="search"
+              name="q"
+              placeholder="Hľadať recept alebo surovinu…"
+            />
+          </form>
+
+          <details class="user-menu">
+            <summary class="btn">Ján Kováč</summary>
+            <ul>
+              <li><a href="#">Môj profil</a></li>
+              <li><a href="#">Moje recepty</a></li>
+              <li><a href="#">Obľúbené recepty</a></li>
+              <li class="divider"><a href="#">Odhlásiť sa</a></li>
+            </ul>
+          </details>
+        </div>
+      </div>
+    </header>
+
+    <main class="container page">
+      <nav class="breadcrumb" aria-label="Navigačná cesta">
+        <ol>
+          <li><a href="index.html">Domov</a></li>
+          <li><a href="#">Recepty</a></li>
+          <li><a href="#">Hlavné jedlá</a></li>
+          <li aria-current="page">Sviečková na smotane</li>
+        </ol>
+      </nav>
+
+      <article class="recipe">
+        <!-- Úvod receptu -->
+        <section class="recipe-hero">
+          <div
+            class="placeholder recipe-photo"
+            role="img"
+            aria-label="Fotografia receptu"
+          >
+            <span>Fotografia receptu</span>
+          </div>
+
+          <div class="recipe-info">
+            <a class="chip" href="#">
+              <svg class="icon icon-sm" aria-hidden="true">
+                <use href="#i-tag" />
+              </svg>
+              Hlavné jedlá
+            </a>
+
+            <h1 class="recipe-title">Sviečková na smotane</h1>
+
+            <p class="author">
+              <span class="avatar avatar-sm" aria-hidden="true"></span>
+              <strong>Ján Kováč</strong>
+              <span
+                >· pridané <time datetime="2026-10-12">12. 10. 2026</time></span
+              >
+            </p>
+
+            <div class="rating-summary">
+              <div class="stars" role="img" aria-label="Hodnotenie 4,3 z 5">
+                <svg class="icon filled"><use href="#i-star" /></svg>
+                <svg class="icon filled"><use href="#i-star" /></svg>
+                <svg class="icon filled"><use href="#i-star" /></svg>
+                <svg class="icon filled"><use href="#i-star" /></svg>
+                <svg class="icon"><use href="#i-star" /></svg>
+              </div>
+              <strong>4,3</strong>
+              <span>(27 hodnotení)</span>
+            </div>
+
+            <ul class="recipe-meta">
+              <li>
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-clock" />
+                </svg>
+                <div><small>Čas prípravy</small><strong>90 min</strong></div>
+              </li>
+              <li>
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-users" />
+                </svg>
+                <div><small>Počet porcií</small><strong>4</strong></div>
+              </li>
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#i-tag" /></svg>
+                <div><small>Kategória</small><strong>Hlavné jedlá</strong></div>
+              </li>
+            </ul>
+
+            <p class="lead">
+              Tradičná česko-slovenská sviečková so smotanovou omáčkou z
+              koreňovej zeleniny, podávaná s knedľou, brusnicami a šľahačkou.
+              Ideálna na nedeľný obed.
+            </p>
+
+            <div class="actions">
+              <button type="button" class="btn btn-primary">
+                <svg class="icon icon-sm" aria-hidden="true">
+                  <use href="#i-heart" />
+                </svg>
+                Pridať do obľúbených
+              </button>
+              <a class="btn" href="#">
+                <svg class="icon icon-sm" aria-hidden="true">
+                  <use href="#i-edit" />
+                </svg>
+                Upraviť
+              </a>
+              <button type="button" class="btn">
+                <svg class="icon icon-sm" aria-hidden="true">
+                  <use href="#i-trash" />
+                </svg>
+                Zmazať
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Suroviny, výživové hodnoty, postup -->
+        <div class="recipe-body">
+          <aside class="recipe-side">
+            <section
+              class="card ingredients"
+              aria-labelledby="ingredients-title"
+            >
+              <h2 class="card-title" id="ingredients-title">Suroviny</h2>
+
+              <div class="servings">
+                <label for="servings">Počet porcií</label>
+                <div class="stepper">
+                  <button type="button" aria-label="Menej porcií">-</button>
+                  <input
+                    type="number"
+                    id="servings"
+                    name="servings"
+                    value="4"
+                    min="1"
+                    max="20"
+                  />
+                  <button type="button" aria-label="Viac porcií">+</button>
+                </div>
+              </div>
+
+              <ul class="ingredient-list">
+                <li>
+                  <label
+                    ><input type="checkbox" /><span
+                      >Hovädzia sviečkovica</span
+                    ></label
+                  ><strong>800 g</strong>
+                </li>
+                <li>
+                  <label><input type="checkbox" /><span>Mrkva</span></label
+                  ><strong>2 ks</strong>
+                </li>
+                <li>
+                  <label
+                    ><input type="checkbox" /><span
+                      >Petržlen (koreň)</span
+                    ></label
+                  ><strong>1 ks</strong>
+                </li>
+                <li>
+                  <label><input type="checkbox" /><span>Zeler</span></label
+                  ><strong>¼ ks</strong>
+                </li>
+                <li>
+                  <label><input type="checkbox" /><span>Cibuľa</span></label
+                  ><strong>1 ks</strong>
+                </li>
+                <li>
+                  <label><input type="checkbox" /><span>Slanina</span></label
+                  ><strong>80 g</strong>
+                </li>
+                <li>
+                  <label
+                    ><input type="checkbox" /><span
+                      >Smotana na varenie</span
+                    ></label
+                  ><strong>250 ml</strong>
+                </li>
+                <li>
+                  <label
+                    ><input type="checkbox" /><span
+                      >Bobkový list, nové korenie</span
+                    ></label
+                  ><strong>podľa chuti</strong>
+                </li>
+              </ul>
+            </section>
+
+            <section class="card nutrition" aria-labelledby="nutrition-title">
+              <h2 class="card-title" id="nutrition-title">Výživové hodnoty</h2>
+              <p>na 1 porciu</p>
+              <dl>
+                <dt>Energia</dt>
+                <dd>620 kcal</dd>
+                <dt>Bielkoviny</dt>
+                <dd>34 g</dd>
+                <dt>Sacharidy</dt>
+                <dd>48 g</dd>
+                <dt>Tuky</dt>
+                <dd>29 g</dd>
+              </dl>
+            </section>
+          </aside>
+
+          <div class="recipe-main">
+            <section class="steps" aria-labelledby="steps-title">
+              <h2 id="steps-title">Postup prípravy</h2>
+              <ol>
+                <li>
+                  Mäso očistíme, prešpikujeme slaninou, osolíme a okoreníme.
+                </li>
+                <li>
+                  Zeleninu a cibuľu nakrájame na kocky a spolu so slaninou
+                  opražíme na masti.
+                </li>
+                <li>
+                  Pridáme mäso, zo všetkých strán ho opečieme, prilejeme vodu,
+                  pridáme korenie a dusíme pod pokrievkou približne 90 minút.
+                </li>
+                <li>
+                  Mäkké mäso vyberieme, zeleninu s výpekom rozmixujeme a
+                  prepasírujeme.
+                </li>
+                <li>
+                  Do omáčky vmiešame smotanu, dochutíme cukrom, octom a soľou a
+                  krátko povaríme.
+                </li>
+                <li>
+                  Mäso nakrájame na plátky a podávame s omáčkou, knedľou,
+                  brusnicami a šľahačkou.
+                </li>
+              </ol>
+            </section>
+
+            <section class="card rate" aria-labelledby="rate-title">
+              <div>
+                <h2 class="card-title" id="rate-title">
+                  Ohodnoťte tento recept
+                </h2>
+                <p>
+                  Každý prihlásený používateľ môže recept ohodnotiť iba raz.
+                </p>
+              </div>
+              <form action="#" class="rate-row">
+                <fieldset>
+                  <legend class="visually-hidden">Počet hviezdičiek</legend>
+                  <div class="star-input">
+                    <input
+                      type="radio"
+                      id="star5"
+                      name="rating"
+                      value="5"
+                    /><label for="star5"
+                      ><svg class="icon"><use href="#i-star" /></svg
+                      ><span class="visually-hidden">5 hviezdičiek</span></label
+                    >
+                    <input
+                      type="radio"
+                      id="star4"
+                      name="rating"
+                      value="4"
+                    /><label for="star4"
+                      ><svg class="icon"><use href="#i-star" /></svg
+                      ><span class="visually-hidden">4 hviezdičky</span></label
+                    >
+                    <input
+                      type="radio"
+                      id="star3"
+                      name="rating"
+                      value="3"
+                    /><label for="star3"
+                      ><svg class="icon"><use href="#i-star" /></svg
+                      ><span class="visually-hidden">3 hviezdičky</span></label
+                    >
+                    <input
+                      type="radio"
+                      id="star2"
+                      name="rating"
+                      value="2"
+                    /><label for="star2"
+                      ><svg class="icon"><use href="#i-star" /></svg
+                      ><span class="visually-hidden">2 hviezdičky</span></label
+                    >
+                    <input
+                      type="radio"
+                      id="star1"
+                      name="rating"
+                      value="1"
+                    /><label for="star1"
+                      ><svg class="icon"><use href="#i-star" /></svg
+                      ><span class="visually-hidden">1 hviezdička</span></label
+                    >
+                  </div>
+                </fieldset>
+                <button type="submit" class="btn btn-primary">
+                  Odoslať hodnotenie
+                </button>
+              </form>
+            </section>
+          </div>
+        </div>
+
+        <!-- Komentáre -->
+        <section class="comments" aria-labelledby="comments-title">
+          <h2 id="comments-title">Komentáre (12)</h2>
+
+          <form class="comment-form" action="#">
+            <span class="avatar" aria-hidden="true"></span>
+            <div class="fields">
+              <label for="comment" class="visually-hidden">Váš komentár</label>
+              <textarea
+                id="comment"
+                name="comment"
+                maxlength="1000"
+                placeholder="Napíšte komentár…"
+              ></textarea>
+              <div class="form-footer">
+                <span>0 / 1000 znakov</span>
+                <button type="submit" class="btn btn-primary">
+                  Pridať komentár
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <ol class="comment-list">
+            <li class="comment">
+              <span class="avatar" aria-hidden="true"></span>
+              <article class="comment-body">
+                <header>
+                  <span class="comment-author"
+                    >Mária Horváthová
+                    <time datetime="2026-10-25T10:00"
+                      >pred 2 hodinami</time
+                    ></span
+                  >
+                </header>
+                <p>
+                  Výborný recept, robila som ho na nedeľný obed a všetkým
+                  chutilo. Smotany som dala o trochu viac.
+                </p>
+              </article>
+            </li>
+            <li class="comment">
+              <span class="avatar" aria-hidden="true"></span>
+              <article class="comment-body">
+                <header>
+                  <span class="comment-author"
+                    >Ján Kováč (vy)
+                    <time datetime="2026-10-24">včera</time></span
+                  >
+                  <button type="button" class="btn-link">
+                    <svg class="icon icon-sm" aria-hidden="true">
+                      <use href="#i-trash" />
+                    </svg>
+                    Zmazať
+                  </button>
+                </header>
+                <p>
+                  Ďakujem! Odporúčam mäso nechať pred podávaním 10 minút
+                  odpočinúť.
+                </p>
+              </article>
+            </li>
+            <li class="comment">
+              <span class="avatar" aria-hidden="true"></span>
+              <article class="comment-body">
+                <header>
+                  <span class="comment-author"
+                    >Peter Novák
+                    <time datetime="2026-10-14">14. 10. 2026</time></span
+                  >
+                </header>
+                <p>Dá sa namiesto sviečkovice použiť aj hovädzie zadné?</p>
+              </article>
+            </li>
+          </ol>
+
+          <div class="more">
+            <button type="button" class="btn">Zobraziť ďalšie komentáre</button>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2026 Navarené · Filip Noga</p>
+        <ul>
+          <li><a href="#">O aplikácii</a></li>
+          <li><a href="#">Kontakt</a></li>
+          <li><a href="#">Podmienky používania</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
